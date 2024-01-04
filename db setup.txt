@@ -1,0 +1,28 @@
+create database name "cinehub" in mysql
+
+query for create the table : 
+
+CREATE TABLE filmTable (
+    FilmId VARCHAR(10) PRIMARY KEY,
+    Title VARCHAR(30),
+    Genre VARCHAR(20),
+    Duration VARCHAR(6),
+    Mood VARCHAR(15)
+);
+
+CREATE TABLE plantoWatchTable(
+    FilmId VARCHAR(10) PRIMARY KEY,
+    Title VARCHAR(30),
+    Genre VARCHAR(20),
+    Duration VARCHAR(6),
+    WatchPlan VARCHAR(10)
+);
+
+CREATE TABLE historyTable (
+    FilmId VARCHAR(10) PRIMARY KEY,
+    Title VARCHAR(30),
+    Genre VARCHAR(20),
+    Duration VARCHAR(6),
+    WatchPlan VARCHAR(10),
+    WatchDate VARCHAR(10)
+);
