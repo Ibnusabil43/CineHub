@@ -255,14 +255,11 @@ public class Film_Panel extends javax.swing.JPanel {
     }//GEN-LAST:event_SaveBtnActionPerformed
 
     private void EditBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditBtnActionPerformed
-
-        
         if (filmIdTb.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please select a film to edit");
         } else {
             try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cinehub", "root", "")) {
                 String filmId = filmIdTb.getText();
-
                 // Create a Film object and set its properties
                 Film updatedFilm = new Film();
                 updatedFilm.setFilmid(filmId);
